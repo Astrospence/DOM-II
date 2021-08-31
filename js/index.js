@@ -4,6 +4,7 @@ const nav = document.querySelectorAll('header > div > nav > a');
 nav.forEach(cb => {
     cb.addEventListener('mouseover', event => {
         cb.style.opacity = '0.5';
+        event.preventDefault();
     })
 })
 //#2
@@ -52,10 +53,17 @@ visualViewport.addEventListener('resize', event => {
     console.log('The Window was Resized');
 })
 //#9
-document.addEventListener('pointerdown', event => {
-    body.style.backgroundColor = 'lightgreen';
+const adventure = document.querySelectorAll('.img-content > img');
+adventure.forEach(cb => {
+    cb.addEventListener('pointerdown', event => {
+        cb.style.opacity = '0.5';
+        event.stopPropagation();
+    })
 })
 //#10
-document.addEventListener('pointerup', event => {
-    body.style.backgroundColor = 'white';
+adventure.forEach(cb => {
+    cb.addEventListener('pointerup', event => {
+        cb.style.opacity = '100';
+        event.stopPropagation();
+    })
 })
