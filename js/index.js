@@ -51,3 +51,11 @@ visualViewport.addEventListener('resize', event => {
     })
     console.log('The Window was Resized');
 })
+//#9
+document.addEventListener('pointerdown', event => {
+    body.style.backgroundColor = 'lightgreen';
+})
+//#10
+document.addEventListener('pointerup', event => {
+    body.style.backgroundColor = 'white';
+})
