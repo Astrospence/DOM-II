@@ -22,3 +22,7 @@ body.addEventListener('keydown', event => {
     }
 }) 
 //#4
+const magicSchoolBus = document.querySelector('.intro > img');
+magicSchoolBus.addEventListener('click', event => {
+    magicSchoolBus.setAttribute('src', '/img/magicschoolbus.jpg');
+})
