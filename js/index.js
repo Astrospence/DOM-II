@@ -22,7 +22,13 @@ body.addEventListener('keydown', event => {
     }
 }) 
 //#4
-const magicSchoolBus = document.querySelector('.intro > img');
-magicSchoolBus.addEventListener('click', event => {
-    magicSchoolBus.setAttribute('src', '/img/magicschoolbus.jpg');
+const bus = document.querySelector('.intro > img');
+bus.addEventListener('click', event => {
+    bus.style.border = 'solid blue';
 })
+//#5
+const funBus = document.querySelector('.logo-heading');
+window.addEventListener('load', event => {
+    alert('The page loaded! Now click ok because this is annoying...');
+})
+//#6
