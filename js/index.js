@@ -27,8 +27,27 @@ bus.addEventListener('click', event => {
     bus.style.border = 'solid blue';
 })
 //#5
-const funBus = document.querySelector('.logo-heading');
 window.addEventListener('load', event => {
-    alert('The page loaded! Now click ok because this is annoying...');
+    console.log('The Page has Loaded Successfully');
 })
 //#6
+const funBus = document.querySelector('.logo-heading');
+funBus.addEventListener('dblclick', event => {
+    if(funBus.innerText === 'Fun Bus') {
+        funBus.textContent = 'Super Fun Bus';
+    }else{
+        funBus.textContent = 'Fun Bus';
+    }
+})
+//#7
+document.addEventListener('copy', event => {
+    alert('PLAGARISM INITIATED: CYBER POLICE EN ROUTE');
+})
+//#8
+const p = document.querySelectorAll('p');
+visualViewport.addEventListener('resize', event => {
+    p.forEach(cb => {
+        cb.style.fontWeight = 'bold';
+    })
+    console.log('The Window was Resized');
+})
